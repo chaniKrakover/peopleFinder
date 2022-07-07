@@ -21,21 +21,11 @@ export const Header = styled.div`
   display: flex;
 `;
 
+
 export const Form = styled.div`
   display: flex;
   flex-direction: column;
   gap: 25px;
   max-width: 400px;
   width: 100%;
-`;
-
-
-export const Wraper = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
-  width: 600px;
-  height: calc(100vh - 270px);
-  margin-block-start: 30px;
-  // overflow-y: scroll;
 `;

@@ -37,7 +37,8 @@ Each user displays a heart icon while hovered, you need to implement the followi
 
 1. Add functionality which enables the user to select their favorite users.
    - Should be persistent - refreshing or closing the site will not reset the favorites.
-2. Once a user is Favorited, the heart icon should stay visible even if the user is not currently being hovered over.
+2. Once a user is Favorited, the heart icon should stay visible even if the user is not currently being hovered over.   
+
 3. Clicking on a favorite user's heart icon should unfavorite the user.
 4. Favorite Page\
    4.1. The Navbar has a Favorites tab, which should navigate to a new Favorite Page once clicked.\
