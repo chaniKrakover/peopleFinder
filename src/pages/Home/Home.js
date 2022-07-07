@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Text from "components/Text";
 import UserList from "pages/UserList";
 import InfiniteScroll from "react-infinite-scroll-component";
@@ -19,18 +19,17 @@ const Home = ({ users, isLoading, setPage, page }) => {
           <Text size="64px" bold>
             PplFinder
           </Text>
-          {/* <button type='button' onClick={handleScroll}>next page</button> */}
         </S.Header>
-        <S.Wraper>
+        <S.Wrapper>
           <InfiniteScroll 
             dataLength={25}
-            next={fetchMoreData}
+            next={users&&fetchMoreData}
             hasMore={true}
             loader={<h4>Loading...</h4>}
           >
             <UserList users={users} isLoading={isLoading} />
           </InfiniteScroll>
-        </S.Wraper>
+        </S.Wrapper>
       </S.Content>
     </S.Home>
   );

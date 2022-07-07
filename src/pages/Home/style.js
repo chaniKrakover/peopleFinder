@@ -30,12 +30,12 @@ export const Form = styled.div`
 `;
 
 
-export const Wraper = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
-  width: 600px;
-  height: calc(100vh - 270px);
-  margin-block-start: 30px;
-  // overflow-y: scroll;
-`;
+export const Wrapper = styled.div`
+display: flex;
+flex-direction: column;
+gap: 35px;
+width: 650px;
+height: calc(100vh - 270px);
+margin-block-start: 30px;
+overflow-y: scroll;
+overflow: visible;`
