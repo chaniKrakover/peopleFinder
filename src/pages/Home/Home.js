@@ -23,7 +23,7 @@ const Home = ({ users, isLoading, setPage, page }) => {
         <S.Wrapper>
           <InfiniteScroll 
             dataLength={users.length}
-            next={users&&fetchMoreData}
+            next={fetchMoreData}
             hasMore={true}
             loader={<h4>Loading...</h4>}
             style={{ overflow: 'visible' }}
