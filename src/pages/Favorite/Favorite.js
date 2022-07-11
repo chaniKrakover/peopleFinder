@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import Text from "components/Text";
-import UserList from "pages/UserList";
+import UserList from "components/UserList";
 import * as S from "./style";
 import { useSelector } from "react-redux";
-import { useEffect } from "react";
 
 const Favorite = ({ users, isLoading }) => {
   const favoriteUsers = useSelector(state => state.favorite)

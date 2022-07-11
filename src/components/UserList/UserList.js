@@ -24,6 +24,7 @@ const UserList = ({ users, isLoading }) => {
     setHoveredUserId();
   };
 
+  
   const handleClickFavorite = (user) => {
     let favoriteUsersUpdated = [];
     if (favoriteUsers.includes(user.email)) {
@@ -31,10 +32,9 @@ const UserList = ({ users, isLoading }) => {
     }
     else {
       favoriteUsersUpdated = [...favoriteUsers, user.email]
+    }
       localStorage.setItem("favoriteUsers", JSON.stringify(favoriteUsersUpdated))
       dispatch({ type: 'SET_FEVORITE_USERS', payload: { favorite: favoriteUsersUpdated } })
-    }
-
   }
 
   return (

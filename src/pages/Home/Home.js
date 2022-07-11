@@ -1,16 +1,16 @@
 import React from "react";
 import Text from "components/Text";
-import UserList from "pages/UserList";
+import UserList from "components/UserList";
 import InfiniteScroll from "react-infinite-scroll-component";
 import * as S from "./style";
 
 const Home = ({ users, isLoading, setPage, page }) => {
 
   const fetchMoreData = () => {
-    if(users)
-    setPage(page + 1);
+    if (users)
+      setPage(page + 1);
   }
-  
+
 
   return (
     <S.Home>
@@ -20,18 +20,27 @@ const Home = ({ users, isLoading, setPage, page }) => {
             PplFinder
           </Text>
         </S.Header>
-        <S.Wrapper>
-          <InfiniteScroll 
+         <div
+          id="scrollableDiv"
+          style={{
+            height: 'calc(100vh - 220px)',
+            overflow: 'auto',
+            display: 'flex',
+            width: "650px",
+          }}
+        >
+           <InfiniteScroll
             dataLength={users.length}
             next={fetchMoreData}
+            style={{ display: 'flex', overflow: 'visible', flexDirection: 'column-reverse' }} 
             hasMore={true}
-            loader={<h4>Loading...</h4>}
-            style={{ overflow: 'visible' }}
+            scrollThreshold="300px"
+            scrollableTarget="scrollableDiv"
           >
             <UserList users={users} isLoading={isLoading} />
           </InfiniteScroll>
-        </S.Wrapper>
-      </S.Content>
+        </div>
+       </S.Content>
     </S.Home>
   );
 };
